@@ -27,15 +27,20 @@ function App() {
 
     }
     
-
-    
   }
+
+  const handleDelete = (id) => {
+        
+        const filteredTodos = todos.filter((todo) => todo.id !== id)
+        updateTodos(filteredTodos)
+
+    }
   return (
     <div className="container">
       <Form input = {input} updateInput = {updateInput} handleClick = {handleClick}/>
 
       <div className="todos__list">
-        <TodosList todos = {todos} />
+        <TodosList todos = {todos} handleDelete = {handleDelete} />
       </div>
 
     </div>
