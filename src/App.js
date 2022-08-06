@@ -8,7 +8,8 @@ import { TodosList } from './conponents/TodosList';
 function App() {
   const [input, updateInput] = useState('')
   const [todos, updateTodos] = useState([])
-  console.log(todos)
+  const [checked, setChecked] = useState(false)
+  console.log(checked)
   // handleClick func
   const handleClick = () => {
     if(input){
@@ -16,7 +17,7 @@ function App() {
       const todoObject = {
       content: input,
       id: todos.length + 1,
-      completed: false
+      completed: checked
     }
 
     updateTodos((prevTodos) => {
@@ -40,7 +41,7 @@ function App() {
       <Form input = {input} updateInput = {updateInput} handleClick = {handleClick}/>
 
       <div className="todos__list">
-        <TodosList todos = {todos} handleDelete = {handleDelete} />
+        <TodosList todos = {todos} handleDelete = {handleDelete} checked ={checked} setChecked={setChecked} />
       </div>
 
     </div>
