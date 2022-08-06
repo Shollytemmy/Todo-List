@@ -11,7 +11,9 @@ function App() {
   console.log(todos)
   // handleClick func
   const handleClick = () => {
-    const todoObject = {
+    if(input){
+
+      const todoObject = {
       content: input,
       id: todos.length + 1,
       completed: false
@@ -22,6 +24,11 @@ function App() {
     })
 
     updateInput('')
+
+    }
+    
+
+    
   }
   return (
     <div className="container">
