@@ -2,15 +2,16 @@
   --background-color:  #c9e9f4;
   --white: #fff;
   --color: #000;
-  --testing: 0px solid red;
+  --testing: 1px solid red;
 }
 
 
-.container{
+ /* .container{
   
   border: var(--testing);
-  height: 50vh;
-}
+  height: 100vh;
+
+}  */
 
 .todo{
   margin: 2rem auto;
@@ -45,5 +46,25 @@
 .cta:hover{
   background-color: var(--white);
   color: var(--color);
+}
+
+.todos__list{
+  margin: 2rem auto;
+  width: 50%;
+  
+  
+}
+
+.list__todos{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--background-color);
+  margin: 5px;
+ border-radius: 10px;
+ padding: 10px 10px;
+ text-transform: capitalize;
+ font-size: 18px;
+ color: var(--white);
 }
 
